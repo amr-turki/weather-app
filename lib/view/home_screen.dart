@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_application/view/search_screen.dart';
+import 'package:weather_application/widget/no_weather_body.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -37,6 +38,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      body: NoWeatherBody(),
     );
   }
 }
