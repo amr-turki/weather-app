@@ -44,11 +44,11 @@ class HomeScreen extends StatelessWidget {
       body: BlocBuilder(
         builder: (context, state) {
           if (state is LoadedWeather) {
-            return WeatherBody(model:state.model);
+            return WeatherBody(model: state.model);
           } else if (state is Noweather) {
             return NoWeatherBody();
           } else {
-            return Text(state.);
+            return Text('Oops! There seems to be a problem. Please try again.');
           }
         },
       ),
