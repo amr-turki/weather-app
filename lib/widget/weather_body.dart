@@ -9,8 +9,18 @@ class WeatherBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
-      
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            getThemeColor(model.statusWeather),
+            getThemeColor(model.statusWeather)[500]!,
+            getThemeColor(model.statusWeather)[50]!,
+          ],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
+
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(

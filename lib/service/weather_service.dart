@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:weather_application/model/weather_model.dart';
 
 class WeatherService {
@@ -24,7 +23,7 @@ class WeatherService {
           e.response?.data['error']['message'] ??
           'Oops! There seems to be a problem. Please try again.';
       throw Exception(message);
-    } on Exception catch (e) {
+    } on Exception {
       throw Exception('Oops! There seems to be a problem. Please try again.');
     }
   }
