@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:weather_application/model/weather_model.dart';
 
 class WeatherBody extends StatelessWidget {
-  const WeatherBody({Key? key}) : super(key: key);
+  const WeatherBody({Key? key,required this.model}) : super(key: key);
 
+  final WeatherModel model;
   @override
   Widget build(BuildContext context) {
     return Padding(
