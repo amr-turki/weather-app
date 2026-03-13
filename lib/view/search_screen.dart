@@ -25,6 +25,7 @@ class SearchScreen extends StatelessWidget {
           child: TextField(
             onSubmitted: (value) {
               BlocProvider.of<GetWeatherCubit>(context).getWeather(city: value);
+              Navigator.pop(context);
             },
             decoration: InputDecoration(
               hintText: 'Enter City Name',

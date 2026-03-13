@@ -14,7 +14,7 @@ class WeatherService {
 
     try {
       final response = await dio.get(
-        '$baseurl/forecast.json?key$apikey=&q$city&days=2&aqi=no&alerts=no',
+        '$baseurl/forecast.json?key=$apikey&q=$city&days=2&aqi=no&alerts=no',
       );
       WeatherModel model = WeatherModel.fromjson(response.data);
 
