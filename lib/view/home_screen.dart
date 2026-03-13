@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_application/cubit/get_weather_cubit/get_weather_status.dart';
 import 'package:weather_application/view/search_screen.dart';
 import 'package:weather_application/widget/no_weather_body.dart';
+import 'package:weather_application/widget/weather_body.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -38,7 +41,17 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: NoWeatherBody(),
+      body: BlocBuilder(
+        builder: (context, state) {
+          if (state is LoadedWeather) {
+            return WeatherBody();
+          } else if (state is Noweather) {
+            return NoWeatherBody();
+          } else {
+            return Text('Oops! There seems to be a problem. Please try again.');
+          }
+        },
+      ),
     );
   }
 }
