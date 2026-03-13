@@ -6,7 +6,7 @@ class WeatherService {
   final Dio dio;
   WeatherService(this.dio);
 
-  Future<WeatherModel?> FetchWeatherDate({required String city}) async {
+  Future<WeatherModel> FetchWeatherDate({required String city}) async {
     final dio = Dio();
 
     final String baseurl = 'http://api.weatherapi.com/v1';
