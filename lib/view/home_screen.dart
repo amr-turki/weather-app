@@ -13,10 +13,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
+    var weatherModel = BlocProvider.of<GetWeatherCubit>(context).model;
+
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,      
+        backgroundColor: getThemeColor(weatherModel?.statusWeather),
         title: Text(
           'Weather App',
           style: TextStyle(
