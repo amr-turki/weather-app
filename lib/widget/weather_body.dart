@@ -46,11 +46,11 @@ class WeatherBody extends StatelessWidget {
                 Column(
                   children: [
                     Text(
-                      'Min Temp is ${model.maxTemp.round()}',
+                      'Min Temp is ${model.minTemp.round()}',
                       style: TextStyle(fontSize: 16),
                     ),
                     Text(
-                      'Max Temp is ${model.minTemp.round()}',
+                      'Max Temp is ${model.maxTemp.round()}',
                       style: TextStyle(fontSize: 16),
                     ),
                   ],
